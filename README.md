@@ -9,7 +9,7 @@
     git clone https://github.com/Vikash-Pareek/Cloud-Storage-UI-ReactJS.git
     
 2. #### Install Project Dependencies
-    >> cd mobile-responsive-cloud-storage-ui  
+    >> cd Cloud-Storage-UI-ReactJS 
     >> npm install
     
 3. #### Run the project using this command inside the project folder
