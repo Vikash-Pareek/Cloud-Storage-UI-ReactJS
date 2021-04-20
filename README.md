@@ -23,3 +23,7 @@
     4. /Notifications
     5. /Profile
     6. /StorageManagement
+
+
+-> Project Deployed on Netlify :
+https://vikash-pareek.netlify.app/
