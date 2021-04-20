@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Onboarding from './Components/Onboarding.js';
+import Home from './Components/Home.js';
+import LocalStorage from './Components/LocalStorage.js';
+import Notifications from './Components/Notifications.js';
+import Profile from './Components/Profile.js';
+import StorageManagement from './Components/StorageManagement.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      <Router>
+        <Switch>
+
+          <Route path="/StorageManagement">
+            <StorageManagement />
+          </Route>
+
+          <Route path="/Profile">
+            <Profile />
+          </Route>
+
+          <Route path="/Notifications">
+            <Notifications />
+          </Route>
+
+          <Route path="/LocalStorage">
+            <LocalStorage />
+          </Route>
+
+          <Route path="/Home">
+            <Home />
+          </Route>
+
+          <Route path="/">
+            <Onboarding />
+          </Route>
+
+        </Switch>
+      </Router>
+
+    </>
   );
 }
 
