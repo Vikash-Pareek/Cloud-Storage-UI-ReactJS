@@ -32,7 +32,7 @@ function Profile() {
 
 
                 <div style={{ paddingLeft: "20px" }}>
-                    <img src={UserDetails} alt="Profile Picture" />
+                    <img src={UserDetails} alt="Profile" />
                 </div>
 
 

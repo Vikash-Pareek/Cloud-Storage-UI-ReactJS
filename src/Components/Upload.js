@@ -67,7 +67,7 @@ function Upload() {
             {uploadBoxOpen ?
                 <>
                     <div style={{
-                        backgroundColor: "rgb(0,0,0)", backgroundColor: "rgba(0,0,0,0.5)", width: "375px",
+                        backgroundColor: "rgba(0,0,0,0.5)", width: "375px",
                         height: "812px", position: "fixed", top: "0"
                     }} onClick={uploadBoxClose}></div>
 
