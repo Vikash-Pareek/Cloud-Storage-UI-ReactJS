@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 import LargeViewMessage from './LargeViewMessage';
 import NavBar from './NavBar.js';
@@ -10,6 +10,39 @@ import BottomNavBar from './BottomNavBar.js';
 
 
 function Profile() {
+
+    const [switchStyle1, setSwitchStyle1] = useState(true);
+
+    const [switchStyle2, setSwitchStyle2] = useState(false);
+
+    const switchOn = () => {
+        return (
+            <div style={{
+                width: "45px", height: "20px", backgroundColor: "#5786fb", borderRadius: "20px",
+                padding: "5px", cursor: "pointer"
+            }}>
+                <div style={{
+                    width: "20px", height: "20px", backgroundColor: "#fff", borderRadius: "100px",
+                    transform: "translateX(25px)"
+                }}></div>
+            </div>
+        );
+    };
+
+    const switchOff = () => {
+        return (
+            <div style={{
+                width: "45px", height: "20px", backgroundColor: "#959fba", borderRadius: "20px",
+                padding: "5px", cursor: "pointer"
+            }}>
+                <div style={{
+                    width: "20px", height: "20px", backgroundColor: "#fff", borderRadius: "100px",
+                    transform: "translateX(0)"
+                }}></div>
+            </div>
+        );
+    };
+
 
     return (
         <>
@@ -109,14 +142,8 @@ function Profile() {
                         <p style={{ fontFamily: "Poppins-600", color: "#000", display: "flex", flexGrow: 1, margin: 0 }}>
                             Camera Uploads
                     </p>
-                        <div style={{
-                            width: "45px", height: "20px", backgroundColor: "#5786fb", borderRadius: "20px",
-                            padding: "5px", cursor: "pointer"
-                        }}>
-                            <div style={{
-                                width: "20px", height: "20px", backgroundColor: "#fff", borderRadius: "100px",
-                                transform: "translateX(25px)"
-                            }}></div>
+                        <div onClick={() => setSwitchStyle1(!switchStyle1)}>
+                            {switchStyle1 ? switchOn() : switchOff()}
                         </div>
                     </div>
 
@@ -128,14 +155,8 @@ function Profile() {
                         <p style={{ fontFamily: "Poppins-600", color: "#000", display: "flex", flexGrow: 1, margin: 0 }}>
                             Use data for file transfer
                     </p>
-                        <div style={{
-                            width: "45px", height: "20px", backgroundColor: "#959fba", borderRadius: "20px",
-                            padding: "5px", cursor: "pointer"
-                        }}>
-                            <div style={{
-                                width: "20px", height: "20px", backgroundColor: "#fff", borderRadius: "100px",
-                                transform: "translateX(0)"
-                            }}></div>
+                        <div onClick={() => setSwitchStyle2(!switchStyle2)}>
+                            {switchStyle2 ? switchOn() : switchOff()}
                         </div>
                     </div>
 
